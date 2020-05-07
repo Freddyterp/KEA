@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/header_scripts"> </div>
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+<div th:replace="fragments/top_menu"> </div>
+
+<div class="container" >
+    <h1> Create Student </h1>
+
+    <form action="/create" method="post" >
+        <div class="form-group">
+            <p>First Name:</p>
+            <input type="text" name="first_name" class="form-control" placeholder="">
+        </div>
+        <div class="form-group">
+            <p>Last Name:</p>
+            <input type="text" name="last_name" class="form-control" placeholder="">
+        </div>
+        <div class="form-group">
+            <p>Enrollment Date:</p>
+            <input type="text" name="enrollment_date" class="form-control" placeholder="yyyy-mm-dd">
+        </div>
+        <div class="form-group">
+            <p>CPR:</p>
+            <input type="text" name="cpr" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-success">Create</button>
+    </form>
+    </div>
+
+
+
+    <div th:replace="fragments/bottom_scripts">
+
+    </div>
+
+</div>
+
+</body>
+</html>
