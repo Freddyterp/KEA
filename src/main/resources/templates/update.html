@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <div th:replace="fragments/header_scripts"> </div>
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+<div th:replace="fragments/top_menu"> </div>
+
+<div class="container" >
+    <h1> Update </h1>
+
+    <form action="/update" method="post">
+        <input type="hidden" name="id" th:value="${item.id}">
+        <div class="form-group">
+            <p>First Name:</p>
+            <input type="text" name="name" th:value="${item.name}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>Last Name:</p>
+            <input type="text" name="price" th:value="${item.price}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>Enrollment Date:</p>
+            <input type="text" name="name" th:value="${item.name}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>CPR:</p>
+            <input type="text" name="price" th:value="${item.price}" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+
+
+</div>
+
+
+
+<div th:replace="fragments/bottom_scripts">
+
+</div>
+
+</div>
+
+</body>
+</html>
